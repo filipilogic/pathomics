@@ -270,6 +270,12 @@ div {
   @include limbo-max {
     font-size: 26px;
   }
+  @include sm-desk-only {
+    top: 32px;
+  }
+  @include md-desk-only {
+    top: 32px;
+  }
 }
 
 .contact-form-popup {
@@ -295,6 +301,12 @@ div {
     @include limbo-max {
       font-size: 14px;
       line-height: 20px;
+    }
+    @include sm-desk-only {
+      margin-bottom: 1.5rem;
+    }
+    @include md-desk-only {
+      margin-bottom: 1.5rem;
     }
   }
 

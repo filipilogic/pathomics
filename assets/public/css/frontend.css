@@ -335,6 +335,16 @@ div.margin-xl {
     font-size: 26px;
   }
 }
+@media (min-width: 1199.6px) and (max-width: 1360.5px) {
+  .close-overlay {
+    top: 32px;
+  }
+}
+@media (min-width: 1360.6px) and (max-width: 1659.5px) {
+  .close-overlay {
+    top: 32px;
+  }
+}
 
 .contact-form-popup {
   display: none;
@@ -363,6 +373,16 @@ div.margin-xl {
   .contact-form-popup .cfp-text {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+@media (min-width: 1199.6px) and (max-width: 1360.5px) {
+  .contact-form-popup .cfp-text {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1360.6px) and (max-width: 1659.5px) {
+  .contact-form-popup .cfp-text {
+    margin-bottom: 1.5rem;
   }
 }
 .contact-form-popup .wpcf7-form {

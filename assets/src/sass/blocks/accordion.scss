@@ -1,0 +1,176 @@
+.il_accordion {
+  padding-top: var(--b-accordion-space-top-ld);
+  padding-bottom: var(--b-accordion-space-bottom-ld);
+  padding-left: var(--b-accordion-space-left-ld);
+  padding-right: var(--b-accordion-space-right-ld);
+  @include tab-max {
+    padding-top: var(--b-accordion-space-top-mt);
+    padding-bottom: var(--b-accordion-space-bottom-mt);
+    padding-left: var(--b-accordion-space-left-mt);
+    padding-right: var(--b-accordion-space-right-mt);
+  }
+  background: linear-gradient(270deg, #F7F4F9 0%, #E3ECF8 100%);
+  overflow: hidden;
+  @include mob-only {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .intro_text {
+    max-width: 75.4rem;
+  }
+  .il_accordion_inner {
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 8rem;
+    @include mob-only {
+      width: 100%;
+    }
+  }
+  .il_accordion-item {
+    margin-bottom: 2rem;
+    border-top: 1.25px solid #010B34;
+    &:not(:last-child) {
+      border-bottom: 1px solid rgb(255 255 255 / 20%);
+      @include limbo-max {
+        margin-bottom: 8px;
+      }
+    }
+    &:not(.open) {
+      .il_accordion-body {
+        display: none;
+      }
+    }
+    &.open {
+      .il_accordion-header {
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .il_accordion-header {
+      font-size: 2.2rem;
+      @include limbo-max {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+      cursor: pointer;
+      padding: 3.5rem 4rem 1rem 0;
+      @include tab-max {
+        padding: 25px 4rem 5px 0;
+      }
+      position: relative;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        background-image: url('/wp-content/uploads/2025/04/Icon-1.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 2.4rem;
+        height: 1.5rem;
+        position: absolute;
+        right: 0;
+        transition: var(--theme-transition);
+      }
+    }
+    .il_accordion-body {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 1.25rem 4rem 0.5rem 0;
+      @include tab-max {
+        padding: 1.5rem 4rem 1rem 0;
+      }
+      p {
+        font-size: 2rem;
+        @include limbo-max {
+          font-size: 15px;
+        }
+        @include lg-desk-min {
+          font-size: 1.8rem;
+        }
+        &:last-of-type {
+          margin-bottom: 2rem;
+          @include tab-max {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      ul {
+        padding-left: 25px;
+        margin-bottom: 0;
+        li {
+          max-width: 42.8rem;
+          font-size: 2rem;
+          @include limbo-max {
+            font-size: 15px;
+          }
+          @include lg-desk-min {
+            font-size: 1.8rem;
+          }
+          &::marker {
+            font-size: 14px;
+          }
+        }
+      }
+      .il_accordion-body-left {
+        @include desk-min {
+          max-width: 110rem;
+        }
+        .accordion-left-small-heading {
+          margin-bottom: 17px;
+          color: var(--color-1);
+          font-size: 2.2rem;
+          @include tab-max {
+            font-size: 18px;
+          }
+          @include lg-desk-min {
+            font-size: 2rem;
+          }
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .il_accordion-body-right {
+        @include tab-max {
+          height: 30rem;
+        }
+        img {
+          width: auto;
+          height: 100%;
+          object-fit: cover;
+          @include tab-max {
+            width: 100%;
+            height: 100%;
+            border-radius: 0 0 1rem 1rem;
+            &.acc_desk_img {
+              display: none;
+            }
+          }
+          @include limbo-min {
+            border-radius: 0 0 1rem 0;
+            &.acc_mob_img {
+              display: none;
+            }
+          }
+        }
+        @include tab-max {
+          width: 100%;
+        }
+        @include limbo-min {
+          width: 35%;
+          text-align: right;
+        }
+      }
+    }
+    &.open {
+      .il_accordion-header {
+        margin-bottom: 5px;
+        &::after {
+          transform: scaleY(-1);
+        }
+      }
+    }
+  }  
+}
+

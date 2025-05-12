@@ -1,0 +1,138 @@
+.wpcf7-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5.2rem;
+    p {
+        width: 100%;
+        @include limbo-min {
+            width: 48%;
+            margin-bottom: 3rem;
+        }
+    }
+    .cf7-width-100 {
+        width: 100%;
+        margin-right: 0;
+    }
+    .submit-button {
+        @include tab-max {
+            margin-top: 1.5rem;
+        }
+        @include limbo-min {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+    input:not(.wpcf7-submit):not([type="checkbox"]), select, textarea {
+        border: 0px;
+        border-radius: 0px;
+        width: 100%;
+        appearance: none;
+        background-color: #F7F7F7;
+        background-position: center right 1.7rem;
+        background-repeat: no-repeat;
+        padding: 1.4rem 2rem 1.5rem 2rem;
+        box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.10);
+        @include tab-max {
+            padding: 2rem 3rem 2rem 3rem;
+        }
+    }
+    textarea {
+        padding-left: 2rem;
+    }
+    input:not(.wpcf7-submit):focus-visible, select:focus-visible, textarea:focus-visible {
+        outline: none;
+    }
+    input:not(.wpcf7-submit), select, textarea, input:not(.wpcf7-submit)::placeholder, select::placeholder, textarea::placeholder {
+        font-size: 16px;
+        color: #4E515A;
+        @include mob-only {
+            font-size: 15px;
+        }
+        @include sm-desk-only {
+            font-size: 14px;
+        }
+        @include md-desk-only {
+            font-size: 14px;
+        }
+    }
+    select {
+        appearance: none;
+        background-image: url('/wp-content/uploads/2025/04/ri_arrow-drop-down-line.svg');
+        background-size: 1rem auto;
+        background-position: right 5% center;
+        background-repeat: no-repeat;
+        @include limbo-max {
+            background-size: 10px;
+        }
+    }
+    .cf7-submit-btn {
+        text-align: center;
+        width: 100%;
+        @include limbo-min {
+            text-align: left;
+        }
+    }
+    input.wpcf7-submit {
+        margin-top: 5px;
+        padding: 1.5rem 2.4rem;
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid var(--color-1);
+        transition: var(--theme-transition);
+        font-size: 18px;
+        font-weight: 600;
+        min-width: 100%;
+        background-color: #092E96;
+        line-height: 1.2;
+        @include limbo-max {
+            line-height: 20px;
+            padding: 2.2rem 4.8rem;
+        }
+    }
+    input.wpcf7-submit:hover {
+        background-color: transparent;
+        border-color: var(--color-2);
+        color: var(--color-2);
+    }
+    div.wpcf7-response-output {
+        font-size: 14px;
+        margin-top: 1.2em;
+    }
+    .wpcf7-not-valid-tip {
+        font-size: 14px;
+        margin-top: 1rem;
+    }
+    .wpcf7-spinner {
+        display: none;
+    }
+
+    
+    .wpcf7-list-item, .wpcf7-list-item label {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-left: 0;
+      [type="checkbox"] {
+        margin-top: 4px;
+      }
+      @include limbo-max {
+        width: unset !important;
+        height: unset !important;
+        background: none !important;
+        flex-direction: row !important;
+      }
+    }
+    .wpcf7-list-item-label {
+      font-size: 14px;
+      a {
+        font-size: 14px;
+      }
+      @include limbo-max {
+        width: unset !important;
+        height: unset !important;
+        background: none !important;
+      }
+    }
+  }

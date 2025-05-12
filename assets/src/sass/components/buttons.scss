@@ -1,0 +1,45 @@
+/* Buttons */
+
+.il_btn {
+    padding: 1.2rem 4.5rem;
+    display: inline-flex;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid var(--color-1);
+    transition: var(--theme-transition);
+    font-size: 18px !important;
+    font-weight: 500;
+    @include limbo-max {
+      padding: 1.8rem 4.8rem;
+      font-size: 14px !important;
+    }
+    &.button-color-bbw, &.button-hover-color-bbw:hover {
+      background-color: var(--color-1);
+      border-color: var(--color-1);
+      color: #fff;
+    }
+    &.button-color-tpp, &.button-hover-color-tpp:hover {
+      background-color: transparent;
+      border-color: var(--color-2);
+      color: var(--color-2);
+    }
+    &.button-color-ppw, &.button-hover-color-ppw:hover {
+      background-color: var(--color-2);
+      border-color: var(--color-2);
+      color: #fff;
+    }
+    &.button-color-tbb, &.button-hover-color-tbb:hover {
+      background-color: transparent;
+      border-color: var(--color-1);
+      color: var(--color-1);
+    }
+    &.button-color-wwb, &.button-hover-color-wwb:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #1A202C;
+    }
+    &:not(:last-child), &:not(:last-child):not(:only-child) {
+      margin-right: 3rem;
+    }
+  }

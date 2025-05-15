@@ -1007,11 +1007,23 @@
 
 .thank-you-hero {
   background: linear-gradient(180deg, #D6DFE4 -8.4%, #F6F8FA 46.23%, #C7D3D9 98.71%);
-  .intro_text {
-    img {
-      margin-top: 4rem;
-      @include limbo-max {
-        max-width: 220px;
+  .il_block_intro {
+    .image-before-content {
+      margin-bottom: 32px;
+      img {
+        @include limbo-max {
+          max-width: 65px;
+        }
+      }
+    }
+    p {
+      @include desk-min {
+        font-size: 2.4rem;
+      }
+    }
+    .buttons {
+      .il_btn {
+        color: #fff !important;
       }
     }
   }

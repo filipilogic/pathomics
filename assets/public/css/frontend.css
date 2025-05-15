@@ -9688,13 +9688,21 @@ textarea {
 .thank-you-hero {
   background: linear-gradient(180deg, #D6DFE4 -8.4%, #F6F8FA 46.23%, #C7D3D9 98.71%);
 }
-.thank-you-hero .intro_text img {
-  margin-top: 4rem;
+.thank-you-hero .il_block_intro .image-before-content {
+  margin-bottom: 32px;
 }
 @media (max-width: 1199.5px) {
-  .thank-you-hero .intro_text img {
-    max-width: 220px;
+  .thank-you-hero .il_block_intro .image-before-content img {
+    max-width: 65px;
   }
+}
+@media (min-width: 1199.6px) {
+  .thank-you-hero .il_block_intro p {
+    font-size: 2.4rem;
+  }
+}
+.thank-you-hero .il_block_intro .buttons .il_btn {
+  color: #fff !important;
 }
 
 .hp-transform-section .il_block_intro .intro_title {
